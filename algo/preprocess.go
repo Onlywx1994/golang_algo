@@ -15,11 +15,11 @@ func (self *OneHotEncoder) Transform(features []int) *Features{
 	return new_features
 }
 
-type FeatureMapEncoder struct {
+type FeaturesMapEncoder struct {
 	Maps map[int]int `json:"maps"`
 }
 
-func (self *FeatureMapEncoder) Transform(features *Features) *Features{
+func (self *FeaturesMapEncoder) Transform(features *Features) *Features{
 	if self.Maps ==nil || len(self.Maps)==0{
 		return features
 	}
